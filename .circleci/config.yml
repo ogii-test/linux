@@ -8,7 +8,7 @@ jobs:
     steps:
       # - run: git config --global feature.experimental blobless
       - run:
-          command: |
+          command: | 
             while true; do
               sleep 5
               # NOTE: on MacOS, the f argument is not supported.
