@@ -1,0 +1,9 @@
+version: 2.1
+
+jobs:
+  build:
+    parallelism: 20
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
