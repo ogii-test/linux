@@ -6,5 +6,6 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - run: git config --global feature.experimental blobless
-      - checkout
+      # - run: git config --global feature.experimental blobless
+      # - checkout
+      - run: git clone --filter=blob:limit=1m https://github.com/ogii-test/linux.git
