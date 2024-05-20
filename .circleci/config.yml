@@ -7,5 +7,15 @@ jobs:
       - image: cimg/base:stable
     steps:
       # - run: git config --global feature.experimental blobless
-      # - checkout
-      - run: git clone --filter=blob:limit=1m https://github.com/ogii-test/linux.git
+      - run:
+          command: |
+            while true; do
+              sleep 5
+              # NOTE: on MacOS, the f argument is not supported.
+              # In this case, you can drop the f argument instead.
+              ps auxwwf
+              echo "======"
+            done
+          background: true
+      - checkout
+      # - run: git clone --filter=blob:limit=1m https://github.com/ogii-test/linux.git
